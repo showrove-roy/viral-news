@@ -41,6 +41,23 @@ body {
   color: #fff !important;
 }
 
+.button-style {
+  padding: 5px 15px !important;
+  border: 1px solid var(--main-color) !important;
+  color: var(--main-color) !important;
+  border-radius: 5px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+.button-style:hover {
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+}
+.button-Active {
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+}
+
 .active {
   color: var(--main-color) !important;
 }
