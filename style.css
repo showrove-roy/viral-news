@@ -1,5 +1,6 @@
 :root {
   --main-color: #5d5fef;
+  --muted-color: #858585;
 }
 
 body {
@@ -14,9 +15,7 @@ body {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
-.active {
-  color: var(--main-color) !important;
-}
+
 .navbar-nav li {
   padding: 0.25rem 1rem !important;
 }
@@ -27,4 +26,21 @@ body {
 }
 .nav-item:hover a {
   color: #f0f0f0 !important;
+}
+.mutade-text {
+  color: var(--muted-color) !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+#category li {
+  padding: 5px 15px;
+  border-radius: 3px;
+}
+#category li:hover {
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+}
+
+.active {
+  color: var(--main-color) !important;
 }
