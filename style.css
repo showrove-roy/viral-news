@@ -40,7 +40,7 @@ body {
   background-color: var(--main-color) !important;
   color: #fff !important;
 }
-#categories :first-child {
+.active-category {
   color: var(--main-color) !important;
   border: 1px solid var(--main-color);
 }
