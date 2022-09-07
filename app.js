@@ -14,16 +14,26 @@ const showCategories = categories => {
     categories.forEach(category => {
         const list = document.createElement('li');
         list.classList.add('mutade-text');
+        list.setAttribute("type", "button");
+        list.setAttribute('id', `${category.category_id}`);
         list.innerHTML = `
         ${category.category_name}
         `;
         categorieS.appendChild(list);
-        console.log(category.category_name);
     });
-    // console.log(categories);
 };
 
-
+// 3 Get category id 
+document.getElementById('categories').addEventListener('click', function (event) {
+    const category_id = event.target.id;
+    event.stopPropagation();
+    if (isNaN(category_id)) {
+        return;
+    } else {
+        const categoryUrl = `https://openapi.programming-hero.com/api/news/category/${category_id}`;
+        console.log(categoryUrl);
+    }
+});
 
 
 
