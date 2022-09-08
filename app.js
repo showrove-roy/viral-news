@@ -195,7 +195,6 @@ const showNewsDetails = newsDetailsList => {
         </div>
     </div>
     `;
-    console.log(newsDetailsList);
 };
 
 
