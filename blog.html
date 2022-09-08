@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Blog</title>
+
+    <!-- Fav Icon Link -->
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+
+    <!-- main css link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- font awesome link  -->
+    <script src="https://kit.fontawesome.com/92261a1a0e.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- Header Section start -->
+    <header>
+        <!-- NavBar Section start -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid d-flex justify-content-around">
+                <div> <a class="navbar-brand fs-4 fw-bolder" href="#"><span class="news-Name">Latest</span> NeUs</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6 fw-bold">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <img src="images/Avatar.svg" alt="" width="40" height="40">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <div class="border border-1 w-75 m-auto border-dark opacity-50"></div>
+        <!-- NavBar Section End -->
+
+    </header>
+    <!-- Header Section end -->
+
+
+    <!-- Main section start -->
+    <main class="container mt-5">
+        <h1 class="mb-3 text-center">Our Latest Blogs</h1>
+        <div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong>Why use template literals (backtick)?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The big advantage of backtick literals over quotation marks is when it is necessary to
+                            insert variables into a string phrase.
+                            <br>
+                            The other advantage of backtick literals (` `) is not needing to escape double quote (“ ”)
+                            or single quote (‘ ’) characters using a backslash (\).
+                            <br>
+                            Backtick literals solve Multi-line code problem and are preferable for HTML.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong>Regular function vs Arrow function</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Inside of a regular JavaScript function, this value (aka the execution context) is dynamic.
+                            <br>
+                            The behavior of this inside of an arrow function differs considerably from the regular
+                            function's this behavior. The arrow function doesn't define its own execution context.
+                            <br><br>
+                            Inside the body of a regular function, arguments is a special array-like object containing
+                            the list of arguments with which the function has been invoked.
+                            <br>
+                            On the other side, no arguments special keyword is defined inside an arrow function.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>Difference Between var, let, and const in JavaScript</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The differences between var, let, and const variable declaration in JavaScript include:
+                            Variables declared with var and const are scoped to the immediate function body.
+                            Variables declared with the var keyword are hoisted. Hoisting means that the variable can be
+                            accessed in their enclosing scope even before they are declared.
+                            Variables declared with the let keyword are block-scoped, which means the variables will
+                            have scope to the immediate enclosing block.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main section end -->
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

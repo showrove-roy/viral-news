@@ -26,6 +26,8 @@ const showCategories = categories => {
 
 // 3 Get category id 
 document.getElementById('categories').addEventListener('click', function (event) {
+    // loading start 
+    toggleSpinner(true);
     const category_id = event.target.id;
     const element = event.target;
     let categoriItems = document.getElementsByClassName('mutade-text');
@@ -63,7 +65,7 @@ const showPost = postList => {
         const postItem = document.createElement('div');
         postItem.classList.add('col');
         postItem.innerHTML = `
-        <div class="card mb-3">
+        <div class="card mb-3" onclick="loadPostDetails('${post._id}')" data-bs-toggle="modal" data-bs-target="#newsPopUP">
         <div class="row g-0">
             <div class="col-md-3">
                 <img src="${post.thumbnail_url}" class="img-fluid rounded-start" alt="...">
@@ -108,14 +110,40 @@ const showPost = postList => {
     const newsCount = postList.length;
     const setNewsNum = document.getElementById('news-count');
     setNewsNum.innerHTML = '';
-    setNewsNum.innerHTML = `
-    ${newsCount} News in this Category
-    `;
+    if (newsCount == 0) {
+        setNewsNum.innerHTML = `
+        ${newsCount} News in this Category
+        `;
+        const postContainer = document.getElementById('post-container');
+        postContainer.innerHTML = '';
+        postContainer.innerHTML = `
+        <h1 class="text-center text-warning"> No news found in this Category!</h1>
+        `;
+    } else {
+        setNewsNum.innerHTML = `
+        ${newsCount} News in this Category
+        `;
+    };
+
+    // Loading Stop
+    toggleSpinner(false);
 };
 
+// Post load Details 
+const loadPostDetails = news_id => {
+    const newsURL = `https://openapi.programming-hero.com/api/news/${news_id}`;
+}
 
 
-
+//Loading Function 
+const toggleSpinner = isLoading => {
+    const loderSpinner = document.getElementById('spinner');
+    if (isLoading) {
+        loderSpinner.classList.remove('d-none');
+    } else {
+        loderSpinner.classList.add('d-none');
+    };
+};
 
 
 

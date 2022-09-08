@@ -42,7 +42,7 @@
                                 <a class="nav-link active" aria-current="page" href="#">News</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <a class="nav-link" href="blog.html">Blog</a>
                             </li>
                             <li class="nav-item">
                                 <img src="images/Avatar.svg" alt="" width="40" height="40">
@@ -58,6 +58,16 @@
 
     </header>
     <!-- Header Section end -->
+
+    <!-- Loading section  -->
+    <div id="spinner" style="z-index: 1001; height: 100vh; opacity: 95%;"
+        class="border w-100 position-absolute bg-dark top-0 start-0 d-flex justify-content-center align-content-center align-items-center position-fixed d-none">
+        <div class="d-flex justify-content-center">
+            <div style="z-index: 100001;" class="spinner-border text-warning fs-5" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Main Section start -->
@@ -111,8 +121,48 @@
         </div>
         <!-- post container end -->
 
+
+
+
+        <!-- PopUp Post details start -->
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button>
+
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <!-- Modal -->
+            <div class="modal fade" id="newsPopUP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PopUp Post details end -->
+
+
+
+
     </main>
     <!-- Main Section End -->
+
+
+
 
 
 
